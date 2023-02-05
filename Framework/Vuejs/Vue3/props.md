@@ -7,7 +7,7 @@ On utilise une nouvelle method sans l’importer car elle est géré nativement 
 - Par exemple dans App.vue en important le component puis:
     - <Compteur prefix=”John” />
 
-``
+```
 <template>
     <p>
 	    {{ prefix }} 
@@ -22,4 +22,4 @@ defineProps({
 })
 
 </script>
-``
+```
