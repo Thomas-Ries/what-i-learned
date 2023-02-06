@@ -1,0 +1,53 @@
+{
+    "window.zoomLevel": 0,
+
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.renderWhitespace": "all", // points pour indentation
+    "editor.linkedEditing": true, // change les balises par paire <section> </section>
+    "editor.occurrencesHighlight": false, // mets en surbrillance les occurences
+    "editor.suggest.insertMode": "replace",
+    "editor.acceptSuggestionOnCommitCharacter": false, // ne remplace pas automatiquement du texte par la première suggestion de l'éditeur
+    "editor.lineHeight": 20,
+    "editor.fontSize": 13,
+
+    "files.autoSave": "onFocusChange", // sauvegrde automatiquement quand je change de fenêtre
+    "files.defaultLanguage": "markdown", // langage par défaut quand double clique pour creation de fichier
+    "files.exclude": {
+        "**/.DS_Store": true,
+    },
+
+    "explorer.autoReveal": false, // au clique simple, si true, ouvre le fichier dans un onglet
+    "explorer.confirmDragAndDrop": false, // glisser déposé sans boîte de confirmation
+
+    "workbench.tree.indent": 15, // indentation dans l'architecture des fichiers au sein de la navbar de droite
+    "workbench.tree.renderIndentGuides": "always", // affiche la barre de guide à la gauche des fichiers
+    "workbench.editor.enablePreview": false, // au clique simple n'ouvre pas en preview le fichier mais en static les uns à la suite des autres
+    
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "[One Dark Pro]": {
+            "editor.selectionBackground": "#3D59A1", // change le surlignement dans le thème
+        }
+    },
+
+    "git.enableSmartCommit": true, // Au clique sur valider, ça stage tout ce que nous avons en attente
+    "gitlens.hovers.currentLine.enabled": false, // désactive les informations sur la ligne courante
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.over": "line", // Affiche les infos Git au hover
+
+
+    
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "open-in-browser.default": "chrome",
+    "workbench.activityBar.visible": true,
+    "php.suggest.basic": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+}
