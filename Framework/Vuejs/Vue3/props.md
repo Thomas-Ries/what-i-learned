@@ -5,7 +5,7 @@ On utilise une nouvelle method sans l’importer car elle est géré nativement 
 ⇒ On peut ensuite aller dans la vue parente où l’on souhaite utiliser la props
 
 - Par exemple dans App.vue en important le component puis:
-    - <Compteur prefix=”John” />
+    ```<Compteur prefix=”John” />```
 
 ```
 <template>
