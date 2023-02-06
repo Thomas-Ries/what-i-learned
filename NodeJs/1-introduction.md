@@ -1,0 +1,45 @@
+# NodeJs
+
+Technologie qui permet d'exécuter du JS côté serveur.  
+Language qui permet d'intéragir avec le système.
+
+### Problématique de départ  
+
+Temps d'exécution du script relativement court mais il perd du temps à attendre des informations en retour de la BDD ou depuis des fichiers.
+
+### Solution apportée par NodeJs
+
+NodeJS va séparer la partie script de la partie qui demande des acès aux fichier (bdd ou autres).
+
+### Comment ça fonctionne ?
+
+Quand on écrit le script, il va déclencher une Event Queue - ou queue d'événements - (série d'opéraions à effectuer).
+
+1. Le système va prendre le premier événement et l'effectuer directement s'il le peut.
+
+2. Si il ne le peut pas, il envoi l'événement au Thread Pool qui va se charger de faire les traitements plus complexes (accès fichier, acès outils réseau, accès sous-processs...) et qui peut se faire de manière asynchrone.
+
+3. Une fois completé, le système va mettre le code à la suite de l'Event Queue
+
+### Bloquant et non bloquant
+
+Code synchrone -> pour lire la ligne suivante (console.log) il faut d'abord que le script puisse exécuter la premeière ligne.  
+-> Le soucis est que le système de boucle d'événement n'est pas utilisé ni le côté asynchrone de NodeJS
+```
+// Code bloquant - Synchrone
+var content = fs.readFileSync('MonFihier.txt');
+consol.log('Mon Fichier : ', content);
+```
+
+
+Manière propre de faire:  
+```
+// Code non bloquant - Asynchrone
+fs.readFile('MonFichier.txt', (err, content) => {
+    if(err) {
+        throw err;
+    }
+    console.log('Mon Fichier : ', content);
+})
+```
+-> on va exécuter de suite le code suivant tout en lançant la lecturedu fichier. Une fois que le fichier est llu alors on lancera le code dans la condition. On empêche pas la poursuite du script.
