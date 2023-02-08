@@ -3,6 +3,13 @@
 Technologie qui permet d'exécuter du JS côté serveur.  
 Language qui permet d'intéragir avec le système.
 
+### Documentations
+
+[dev docs](https://devdocs.io/node/)
+[Nodejs doc](https://nodejs.org/en/docs/)
+
+Le fichier de script se trouve dans [le repo suivant](https://github.com/Thomas-Ries/node-planet-api)
+
 ### Problématique de départ  
 
 Temps d'exécution du script relativement court mais il perd du temps à attendre des informations en retour de la BDD ou depuis des fichiers.
