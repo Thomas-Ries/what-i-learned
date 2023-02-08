@@ -1,8 +1,8 @@
-### Express.js
+# Express.js
 
-- Installation de express.js via npm install express --save (framework de création d'API rest avec Node)
+Installation de express.js via npm install express --save (framework de création d'API rest avec Node)
 
-### Instacier Express
+### Instancier Express
 
 ```javascript
 const express = require('express');
