@@ -94,3 +94,39 @@ app.get('/api/planets/solar-system/:id', (req, res) => {
     res.send(`Vous avez demandé la planète ${planet.name}`)
 })
 ```
+
+___
+
+## Retour réponses HTTP
+
+Retours de réponses http sous format JSON
+
+```javascript
+app.get('/api/planets/solar-system/:name', (req, res) => {
+    const name = req.params.name;
+    const planet = Array.isArray(planets) ? planets.find(planet => planet.name == name) : 0;
+    res.json(planet);
+})
+```
+
+Module helper va permettre de retourner des réponses complètes au consommateur de l'api. Voir le fichier **helper.js**
+
+```javascript
+// Import de la méthode success via affectation destructurée 
+const { success }= require('./helper');
+
+app.get('/api/planets/solar-system/:name', (req, res) => {
+    const name = req.params.name;
+    const planet = Array.isArray(planets) ? planets.find(planet => planet.name == name) : 0;
+    // Insertion du message
+    const message  = "Une planète à bien été trouvée.";
+    //Ajout du helper et utilisation de la methode success dans la response json
+    res.json(success(message, planet));
+})
+```
+
+___
+
+## Middleware d'Express
+
+Middleware = fonction JS capable d'intéragir avec les requêtes entrantes et sortntes de l'API Rest. Ils fonctionnent par dessus les endpoints existants.  
