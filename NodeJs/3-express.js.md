@@ -129,4 +129,4 @@ ___
 
 ## Middleware d'Express
 
-Middleware = fonction JS capable d'intéragir avec les requêtes entrantes et sortntes de l'API Rest. Ils fonctionnent par dessus les endpoints existants.  
+Middleware = fonction JS capable d'intéragir avec les requêtes entrantes et sortantes de l'API Rest. Ils fonctionnent par dessus les endpoints existants.  
