@@ -1,9 +1,9 @@
-# Top javascript array methods to know
+# Top Javascript array methods to know
 
 [Documentation regarding arrays](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 <details>
-<summary><b>Array.filter()</b></summary>
+<summary><b>array.filter()</b></summary>
 Méthode permettant de filter les résultats  
 
 ```javascript
@@ -14,11 +14,11 @@ const goodNotes = notes.filter((note) => note >= 10);
 console.log(goodNotes);
 // Expected output: [12, 17, 18]
 ```
-
+___
 </details>
 
 <details>
-<summary><b>Array.map()</b></summary>
+<summary><b>array.map()</b></summary>
 Prend en premier param une fonction qui permet d’altérer les éléments. Elle transforme un tableau.
 <b>Le tableau en sorti aura la même longueur que le tableau initial.</b>
 Par exemple, elle prend un tableau de 10 éléments et elle va créer un nouveau tableau de 10 éléments qui auront été transformés selon la fonction demandée.  
@@ -55,5 +55,251 @@ console.log(persons.map((p) => p.firstname + ' ' + p.lastname).join('\n'))
 // Marc Doe
 // Manon Doe
 ```
+___
+</details>
 
+<details>
+<summary><b>array.reduce()</b></summary>
+Prend 2 params
+
+* En premier param : un callback qui aura lui-même 2 param : 1/Accumulateur ou `acc` & 2/ Valeur courante, ici `note` comme un item dans une boucle  
+* En second param : Valeur de départ qui sera placé dans l’accumulateur
+
+```javascript
+/*
+** Faire la somme des éléments d'un tableau
+*/
+
+const notes = [12, 17, 18];
+console.log(
+	notes.reduce((acc, note) => {
+		// Devra retourner la nouvelle version de l'acc
+		return acc + note;
+	}, 0)
+// Acc = 0 au démarrage
+);
+// Expected output : 47
+```
+
+Peut aussi s’écrire de la manière suivante :
+
+```javascript
+console.log(
+	notes.reduce((acc, note) => acc + note, 0)
+);
+```
+___
+</details>
+
+<details>
+<summary><b>array.at()</b></summary>
+Permet de récupérer un élément à un index donné. Accepte des index négatifs.  
+
+```javascript
+const notes = [12, 17, 18];
+// Trouver la valeur au dernier index 
+console.log(notes.at(-1);
+//Remplace
+console.log(notes[notes.length - 1];
+```
+___
+</details>
+
+<details>
+<summary><b>array.concat()</b></summary>
+Permet de concaténer des tableaux entre eux afin de les fusionner
+
+```javascript
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
+___
+</details>
+
+<details>
+<summary><b>array.includes()</b></summary>
+Permet de vérifier si une valeur est incluse dans un tableau
+
+```javascript
+const array1 = [1, 2, 3];
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
+```
+___
+</details>
+
+<details>
+<summary><b>array.findIndex()</b></summary>
+Permet de récupérer l’index de l’élément qui a été trouvé
+
+```javascript
+const array1 = [5, 12, 8, 130, 44];
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+// Renvoit index 3 car il n'y a que 130 qui soit au dessus de: element > 13
+```
+Voir aussi array.findLastIndex
+___
+</details>
+
+<details>
+<summary><b>array.foreach()</b></summary>
+Parcourir un tableau pour travailler sur la valeur et sur l’index.
+
+```javascript
+const notes = [12, 17, 18, 9, 7];
+notes.forEach((note, index) => {
+	console.log(note, index);
+})
+// Expected output:
+// 12 0
+// 17 1
+// 18 2
+// 9 3
+// 7 4
+```
+___
+</details>
+
+<details>
+<summary><b>array.from()</b></summary>
+Permet de créer un tableau à parti de diverses valeurs comme string.
+Intéressant quand on a une valeur itérable que l’on souhaite passer en array
+
+```javascript
+console.log(Array.from('foo'));
+// Expected output: Array ["f", "o", "o"]
+
+// Avec deux paramètres pour effectuer une opération de suite après le from
+console.log(Array.from([1, 2, 3], x => x + x));
+// Expected output: Array [2, 4, 6]
+```
+___
+</details>
+
+<details>
+<summary><b>array.join()</b></summary>
+Permet de joindre les éléments avec un caractère de liaison
+
+```javascript
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// Expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"
+```
+___
+</details>
+
+<details>
+<summary><b>array.pop()</b></summary>
+Retire le dernier élément d’un tableau mais modifie le tableau initial
+
+```javascript
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+```
+___
+</details>
+
+<details>
+<summary><b>array.shift()</b></summary>
+Retire le premier élément d’un tableau mais <b>modifie le tableau initial</b>
+
+```javascript
+const array1 = [1, 2, 3];
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
+___
+</details>
+
+<details>
+<summary><b>array.slice()</b></summary>
+Permet de récupérer une partie du tableau. Créer un nouveau tableau sans toucher au premier.
+
+```javascript
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// 2 param = slice entre deux index, le dernier étant non compris
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
+___
+</details>
+
+<details>
+<summary><b>array.push()</b></summary>
+Ajoute un ou plusieurs éléments à un tableau <b>mais affecte le tableau initial</b>
+
+```javascript
+const animals = ['pigs', 'goats', 'sheep'];
+const addAnimal = animals.push('cows');
+
+console.log(addAnimal);
+// Expected output: 4
+
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+```
+___
+</details>
+
+<details>
+<summary><b>array.unshift()</b></summary>
+Permet d’ajouter un ou plusieurs éléments au début du tableau  <b>mais modifie le tableau initial</b>
+
+```javascript
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
+___
 </details>
