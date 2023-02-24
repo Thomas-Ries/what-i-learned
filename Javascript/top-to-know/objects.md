@@ -4,7 +4,7 @@
 
 <details>
 <summary><b>object.entries()</b></summary>
-Va renvoyer un tableau avec les clés et valeurs
+Va renvoyer un tableau avec les <code>clés</code> et <code>valeurs</code>
 
 ```javascript
 const person = { firstname: 'John', lastname: 'Doe' };
@@ -16,7 +16,7 @@ Object.entries(person);
 // 1: (2) ['lastname', 'Doe']
 ```
 
-Permet d’enchaîner sur une boucle FOR OF, chose que l’on ne pouvait faire auparavant
+Permet d’enchaîner sur une boucle <code>FOR OF</code>, chose que l’on ne pouvait faire auparavant
 
 ```javascript
 const object1 = {
