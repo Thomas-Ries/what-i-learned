@@ -1,18 +1,23 @@
-# Equality
+# **Different equality in Javascript**
 
-<details>
-<summary><b>Définition</b></summary>
+**Statut**: Terminé  
+**Type**: Front-End, Javascript, Basic, Algo
+
+___
+
+## **Définition**
+
 JavaScript fournit trois opérations permettant de comparer des valeurs :
 
 - L'égalité stricte (ou identité ou « triple égal ») utilisant `===`,
 - L'égalité faible (ou « double égal ») utilisant `==`,
-- <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a> (ajouté avec ECMAScript 2015).
-___
-</details>
+- [Object.is()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (ajouté avec ECMAScript 2015).
 
-<details>
-<summary><b>L'égalité strict <code>===</code></b></summary>
-L'égalité stricte compare deux valeurs et teste leur égalité. Aucune des valeurs n'est convertie implicitement en une autre valeur avant que la comparaison soit effectuée. Si les valeurs sont typées différemment, elles sont considérées comme différentes.
+___
+
+## **L'égalité strict `===`**
+
+L'égalité stricte **compare deux valeurs et teste leur égalité**. Aucune des valeurs n'est convertie implicitement en une autre valeur avant que la comparaison ne soit effectuée. Si les valeurs sont typées différemment, elles sont considérées comme différentes.
 
 ```javascript
 var num = 0;
@@ -30,12 +35,12 @@ console.log(null === undefined); // false
 console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
-___
-</details>
 
-<details>
-<summary><b>L'égalité faible <code>==</code></b></summary>
-Le test d'égalité faible compare deux valeurs après les avoir converties en valeurs d'un même type. Une fois converties (la conversion peut s'effectuer pour l'une ou les deux valeurs), la comparaison finale est la même que celle effectuée par <code>===</code>. L'égalité faible est symétrique : <code>A == B</code> aura toujours la même signification que <code>B == A</code> pour toute valeur de A et B.
+___
+
+## **L'égalité faible `==`**
+
+Le test d'égalité faible **compare deux valeurs après les avoir converties en valeurs d'un même type**. Une fois converties (la conversion peut s'effectuer pour l'une ou les deux valeurs), la comparaison finale est la même que celle effectuée par `===`. L'égalité faible est symétrique : `A == B` aura toujours la même signification que `B == A` pour toute valeur de A et B.
 
 ```javascript
 var num = 0;
@@ -56,12 +61,12 @@ console.log(null == undefined); // true
 console.log(obj == null);
 console.log(obj == undefined);
 ```
-___
-</details>
 
-<details>
-<summary><b>Object.is()</b></summary>
-La méthode <code>Object.is()</code> permet de déterminer si deux valeurs sont les <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness">mêmes</a>. La valeur de retour est un <code>boolean</code>.
+___
+
+## **Object.is( )**
+
+La méthode `Object.is( )` permet de déterminer si deux valeurs sont les [mêmes](https://developer.mozilla.org/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness). La valeur de retour est un `boolean`.
 
 ```javascript
 Object.is("toto", "toto");     // true
@@ -82,5 +87,5 @@ Object.is(0, -0);                // false
 Object.is(-0, -0);               // true
 Object.is(NaN, 0/0);             // true
 ```
+
 ___
-</details>

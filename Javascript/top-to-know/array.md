@@ -1,9 +1,14 @@
-# Top Javascript array methods to know
+# **Top Javascript array methods to know**
+
+**Statut**: Terminé  
+**Type**: Front-End, Javascript, Basic, Algo, Top knowledges, Arrays
+
+___
 
 [Documentation regarding arrays](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-<details>
-<summary><b>array.filter()</b></summary>
+## **array.filter( )**
+
 Méthode permettant de filter les résultats  
 
 ```javascript
@@ -14,13 +19,13 @@ const goodNotes = notes.filter((note) => note >= 10);
 console.log(goodNotes);
 // Expected output: [12, 17, 18]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.map()</b></summary>
-Prend en premier param une fonction qui permet d’altérer les éléments. Elle transforme un tableau.
-<b>Le tableau en sorti aura la même longueur que le tableau initial.</b>
+___
+
+## **array.map( )**
+
+Prend en premier param une fonction qui **permet d’altérer les éléments**. Elle transforme un tableau.
+Le tableau en sorti aura la même longueur que le tableau initial.
 Par exemple, elle prend un tableau de 10 éléments et elle va créer un nouveau tableau de 10 éléments qui auront été transformés selon la fonction demandée.  
 
 ```javascript
@@ -55,14 +60,16 @@ console.log(persons.map((p) => p.firstname + ' ' + p.lastname).join('\n'))
 // Marc Doe
 // Manon Doe
 ```
-___
-</details>
 
-<details>
-<summary><b>array.reduce()</b></summary>
+___
+
+## **array.reduce( )**
+
 Prend 2 params
 
-* En premier param : un callback qui aura lui-même 2 param : 1/Accumulateur ou `acc` & 2/ Valeur courante, ici `note` comme un item dans une boucle  
+* En premier param : un callback qui aura lui-même 2 param :
+	* 1 -> Accumulateur ou `acc`
+	* 2 -> Valeur courante, ici `note` comme un item dans une boucle  
 * En second param : Valeur de départ qui sera placé dans l’accumulateur
 
 ```javascript
@@ -88,11 +95,11 @@ console.log(
 	notes.reduce((acc, note) => acc + note, 0)
 );
 ```
-___
-</details>
 
-<details>
-<summary><b>array.at()</b></summary>
+___
+
+## **array.at( )**
+
 Permet de récupérer un élément à un index donné. Accepte des index négatifs.  
 
 ```javascript
@@ -102,11 +109,11 @@ console.log(notes.at(-1);
 //Remplace
 console.log(notes[notes.length - 1];
 ```
-___
-</details>
 
-<details>
-<summary><b>array.concat()</b></summary>
+___
+
+## **array.concat( )**
+
 Permet de concaténer des tableaux entre eux afin de les fusionner
 
 ```javascript
@@ -117,11 +124,10 @@ const array3 = array1.concat(array2);
 console.log(array3);
 // Expected output: Array ["a", "b", "c", "d", "e", "f"]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.includes()</b></summary>
+___
+
+## array.includes( )
 Permet de vérifier si une valeur est incluse dans un tableau
 
 ```javascript
@@ -136,11 +142,11 @@ console.log(pets.includes('cat'));
 console.log(pets.includes('at'));
 // Expected output: false
 ```
-___
-</details>
 
-<details>
-<summary><b>array.findIndex()</b></summary>
+___
+
+## **array.findIndex( )**
+
 Permet de récupérer l’index de l’élément qui a été trouvé
 
 ```javascript
@@ -151,12 +157,13 @@ console.log(array1.findIndex(isLargeNumber));
 // Expected output: 3
 // Renvoit index 3 car il n'y a que 130 qui soit au dessus de: element > 13
 ```
-Voir aussi array.findLastIndex
-___
-</details>
 
-<details>
-<summary><b>array.foreach()</b></summary>
+[Voir aussi array.findLastIndex](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex)
+
+___
+
+## **array.foreach( )**
+
 Parcourir un tableau pour travailler sur la valeur et sur l’index.
 
 ```javascript
@@ -171,11 +178,11 @@ notes.forEach((note, index) => {
 // 9 3
 // 7 4
 ```
-___
-</details>
 
-<details>
-<summary><b>array.from()</b></summary>
+___
+
+## **array.from( )**
+
 Permet de créer un tableau à parti de diverses valeurs comme string.
 Intéressant quand on a une valeur itérable que l’on souhaite passer en array
 
@@ -187,11 +194,11 @@ console.log(Array.from('foo'));
 console.log(Array.from([1, 2, 3], x => x + x));
 // Expected output: Array [2, 4, 6]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.join()</b></summary>
+___
+
+## **array.join( )**
+
 Permet de joindre les éléments avec un caractère de liaison
 
 ```javascript
@@ -206,11 +213,10 @@ console.log(elements.join(''));
 console.log(elements.join('-'));
 // Expected output: "Fire-Air-Water"
 ```
-___
-</details>
 
-<details>
-<summary><b>array.pop()</b></summary>
+___
+
+## **array.pop( )**
 Retire le dernier élément d’un tableau mais modifie le tableau initial
 
 ```javascript
@@ -222,12 +228,12 @@ console.log(plants.pop());
 console.log(plants);
 // Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.shift()</b></summary>
-Retire le premier élément d’un tableau mais <b>modifie le tableau initial</b>
+___
+
+## **array.shift( )**
+
+Retire le premier élément d’un tableau mais **modifie le tableau initial**
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -239,11 +245,11 @@ console.log(array1);
 console.log(firstElement);
 // Expected output: 1
 ```
-___
-</details>
 
-<details>
-<summary><b>array.slice()</b></summary>
+___
+
+## **array.slice( )**
+
 Permet de récupérer une partie du tableau. Créer un nouveau tableau sans toucher au premier.
 
 ```javascript
@@ -268,12 +274,12 @@ console.log(animals.slice(2, -1));
 console.log(animals.slice());
 // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.push()</b></summary>
-Ajoute un ou plusieurs éléments à un tableau <b>mais affecte le tableau initial</b>
+___
+
+## **array.push( )**
+
+Ajoute un ou plusieurs éléments à un tableau **mais affecte le tableau initial**
 
 ```javascript
 const animals = ['pigs', 'goats', 'sheep'];
@@ -285,12 +291,12 @@ console.log(addAnimal);
 console.log(animals);
 // Expected output: Array ["pigs", "goats", "sheep", "cows"]
 ```
-___
-</details>
 
-<details>
-<summary><b>array.unshift()</b></summary>
-Permet d’ajouter un ou plusieurs éléments au début du tableau  <b>mais modifie le tableau initial</b>
+___
+
+## **array.unshift( )**
+
+Permet d’ajouter un ou plusieurs éléments au début du tableau **mais modifie le tableau initial**
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -301,5 +307,5 @@ console.log(array1.unshift(4, 5));
 console.log(array1);
 // Expected output: Array [4, 5, 1, 2, 3]
 ```
+
 ___
-</details>

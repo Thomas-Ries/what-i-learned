@@ -1,4 +1,9 @@
-# Values vs references
+# **Values vs references**
+
+**Statut**: Terminé  
+**Type**: Front-End, Javascript, Basic, Algo, Values, References
+
+___
 
 **Les types primitifs sont passées par valeurs.** Ce qui signifie que :
 

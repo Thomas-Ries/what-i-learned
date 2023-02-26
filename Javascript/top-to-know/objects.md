@@ -1,10 +1,15 @@
-# Top Javascript objects methods to know
+# **Top Javascript Objects methods to know**
 
-[Documentation regarding arrays](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
+**Statut**: Terminé  
+**Type**: Front-End, Javascript, Basic, Algo, Top knowledges, Objects
 
-<details>
-<summary><b>object.entries()</b></summary>
-Va renvoyer un tableau avec les <code>clés</code> et <code>valeurs</code>
+___
+
+[Documentation regarding Objects](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+## **Object.entries( )**
+
+Va renvoyer un tableau avec les `clés` et `valeurs`
 
 ```javascript
 const person = { firstname: 'John', lastname: 'Doe' };
@@ -16,7 +21,7 @@ Object.entries(person);
 // 1: (2) ['lastname', 'Doe']
 ```
 
-Permet d’enchaîner sur une boucle <code>FOR OF</code>, chose que l’on ne pouvait faire auparavant
+Permet d’enchaîner sur une boucle `FOR OF`, chose que l’on ne pouvait faire auparavant
 
 ```javascript
 const object1 = {
@@ -34,10 +39,9 @@ for (const [key, value] of Object.entries(object1)) {
 ```
 
 ___
-</details>
 
-<details>
-<summary><b>object.keys()</b></summary>
+## **Object.keys( )**
+
 Renvoie un tableau contenant les clés propres à un objet. Intéressant pour pouvoir enchaîner sur une boucle
 
 ```javascript
@@ -52,11 +56,10 @@ console.log(Object.keys(object1));
 ```
 
 ___
-</details>
 
-<details>
-<summary><b>object.values()</b></summary>
-Même principe que Object.keys(). Renvoie un tableau contenant les valeurs propres à un objet.
+## **Object.values( )**
+
+Même principe que `Object.keys()`. Renvoie un tableau contenant les **valeurs propres à un objet**.
 
 ```javascript
 const object1 = {
@@ -70,10 +73,9 @@ console.log(Object.values(object1));
 ```
 
 ___
-</details>
 
-<details>
-<summary><b>object.assign()</b></summary>
+## **Object.assign( )**
+
 Permet d’assigner des propriétés d’un object à un autre.
 
 ```javascript
@@ -105,18 +107,16 @@ console.log(person);
 ```
 
 ___
-</details>
 
-<details>
-<summary><b>object.create()</b></summary>
+## **Object.create( )**
+
 Va créer un nouvel object en utilisant le prototype d’un object existant.  
 Devenue moins pratique et utilisée depuis ES6 et les classes  
 
 ___
-</details>
 
-<details>
-<summary><b>object.freeze()</b></summary>
+## **Object.freeze( )**
+
 Permet de geler un object. L’object ne pourra plus être modifié et garantie une certaine sécurité.
 
 ```javascript
@@ -134,4 +134,3 @@ console.log(obj.prop);
 ```
 
 ___
-</details>

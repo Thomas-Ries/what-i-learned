@@ -2,7 +2,7 @@
 
 Dans le dossier public créer un fichier en .json
 
-```
+```json
 {
     "info": {
         "title": "Liste des Questions & Réponses de la FAQ",
@@ -26,7 +26,7 @@ Dans le dossier public créer un fichier en .json
 
 Ensuite on fetch dans la vue souhaitée ou dans le store si utilisation de VueX
 
-```
+```javascript
 <template>
 <div>
 

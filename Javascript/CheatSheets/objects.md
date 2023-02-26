@@ -1,4 +1,11 @@
-# Objects CheatSheet
+# Objects cheatsheet
+
+**Statut**: Terminé  
+**Type**: Front-End, Javascript, Basic, Algo, Cheatsheet, Objects
+
+___
+
+## Regular objects methods
 
 ```javascript
 const person = {
@@ -13,48 +20,40 @@ const jobObject = {
 };
 ```
 
-## Regular objects methods
+___
 
-<details>
-<summary><b>Get all object keys</b></summary>
+## **Get all object keys**
 
 ```javascript
 Object.keys(person);
 // ['name', ' age', 'gender']
 ```
 ___
-</details>
 
 
-<details>
-<summary><b>Get all object values</b></summary>
+## **Get all object values**
 
 ```javascript
 Object.values(person);
 // ['John', 30, 'male']
 ```
+
 ___
 
-</details>
-
-<details>
-<summary><b>Get all object entries</b></summary>
+## **Get all object entries**
 
 ```javascript
 Object.entries(person);
 // ['name', 'John'], ['age', 30], ['gender', 'male']
 ```
+
 ___
 
-</details>
-
-<details>
-<summary><b>Assign object to another object</b></summary>
+## **Assign object to another object**
 
 ```javascript
 Object.assign(person, jobObject);
 // { name: 'john', age: 30, gender: 'male', job: 'developer', salary: 1000 }
 ```
-___
 
-</details>
+___

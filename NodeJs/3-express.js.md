@@ -1,16 +1,17 @@
-# Express.js
+# **Express.js**
 
 Installation de express.js via npm install express --save (framework de création d'API rest avec Node)
 
-## Instancier Express
+## **Instancier Express**
 
 ```javascript
 const express = require('express');
 const app  = express();
 ```
+
 ___
 
-### Déterminer un endpoint
+### **Déterminer un endpoint**
 
 ```javascript
 const express = require('express');
@@ -28,7 +29,7 @@ app.listen => démare l'API Rest sur le port définit
 
 ___
 
-## Hot Reload de l'API Rest
+## **Hot Reload de l'API Rest**
 
 Utilisation du package Nodemon qui  fait tourner NodeJs en tâche de fond.  
 Installation en `npm install nodemon --dev-save`
@@ -42,7 +43,7 @@ Pour s'en servir en script via `npm run start`:
 
 ___
 
-## Les routes et endpoints
+## **Les routes et endpoints**
 
 Une route = un endpoint  
 Création d'une route simple  
@@ -58,7 +59,7 @@ app.get('/api/planets/solar-system/mercury', (req, res) => res.send({
 }))
 ```
 
-### Récupérer les params de l'url
+### **Récupérer les params de l'url**
 
 1 paramètre :  
 
@@ -81,7 +82,7 @@ app.get('/api/planets/solar-system/:id/:name', (req, res) => {
 
 ___
 
-## Mise en place d'un jeu de données
+## **Mise en place d'un jeu de données**
 
 **Attention, Express passe les params d'url en tant que string**  
 Donc si recherche req.params.id =>
@@ -97,7 +98,7 @@ app.get('/api/planets/solar-system/:id', (req, res) => {
 
 ___
 
-## Retour réponses HTTP
+## **Retour réponses HTTP**
 
 Retours de réponses http sous format JSON
 
@@ -127,6 +128,6 @@ app.get('/api/planets/solar-system/:name', (req, res) => {
 
 ___
 
-## Middleware d'Express
+## **Middleware d'Express**
 
 Middleware = fonction JS capable d'intéragir avec les requêtes entrantes et sortantes de l'API Rest. Ils fonctionnent par dessus les endpoints existants.  
