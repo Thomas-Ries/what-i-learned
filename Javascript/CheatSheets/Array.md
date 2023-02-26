@@ -7,8 +7,9 @@ ___
 
 ## Regular arrays methods
 
-```javascript
+`const` example to the rest if the cheatsheet : 
 
+```javascript
 const fruits =  ['pomme', 'banane', 'fraise', 'pêche', 'pomme'];
 ```
 

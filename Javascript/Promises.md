@@ -1,11 +1,11 @@
-# Les promesses
+# **Les promesses**
 
 **Statut**: Terminé  
-**Type**: Front-End, Functions, HTTP, Javascript, Request
+**Type**: Front-End, Functions, HTTP, Javascript, Request, Promises
 
 ___
 
-## **Instance de l’objet Promise**
+## **1. Instance de l’objet Promise**
 
 ```javascript
 const p = new Promise();
@@ -43,9 +43,9 @@ console.log(p);
 // Uncaught (in promise) 4
 ```
 
-## **Promise resolve or rejected ?**
+## **2. Promise resolve or rejected ?**
 
-### **then()**
+### **2.1 then()**
 
 Prend en param un callback qui lui-même  prend en param les valeurs renvoyées par la résolution de la promesse
 
@@ -77,7 +77,7 @@ function waitAndLog(duration, msg) {
 waitAndLog(2000, "coucou les gens");
 ```
 
-### **catch( )**
+### **2.2 catch( )**
 
 Capturer l’échec de la promesse
 
@@ -93,7 +93,7 @@ p.catch((e) => {
 
 Les objets then() et catch() sont elles-même des promesses. Il est donc possible et recommandé d’écrire le code de la manière suivante :
 
-### **then( ) & catch( )**
+### **2.3 then( ) & catch( )**
 
 ```javascript
 const p = new Promise((resolve, reject) => {
@@ -106,7 +106,7 @@ p.then((number) => {
 })
 ```
 
-### **then( ) .then( ) .catch( )**
+### **2.4 then( ) .then( ) .catch( )**
 
 ```jsx
 const p = new Promise((resolve, reject) => {
@@ -128,7 +128,7 @@ p
 // Le nombre n°2: 5
 ```
 
-## **Le finally( )**
+## **3. Le finally( )**
 
 Va etre exécuté, que la promesse échoue ou se réalise
 
@@ -149,7 +149,7 @@ p
 .finally(() => console.log('Dans le finally'));
 ```
 
-## **Exemple concret**
+## **4. Exemple concret**
 
 ```javascript
 function wait(duration) {
@@ -183,7 +183,7 @@ wait(2000)
 })
 ```
 
-## **Syntaxe async / await**
+## **5. Syntaxe async / await**
 
 N’utiliser le `async` que si l’on met un await dans la function
 
@@ -228,7 +228,7 @@ async function main() {
 main();
 ```
 
-## **Top Level Await**
+## **6. Top Level Await**
 
 Attention : Utilisable dans certains environnements. En dehors, ne s’utilise que dans des async functions
 
@@ -248,7 +248,7 @@ console.log('Hello');
 
 ```
 
-## **Promise.resolve( ) & promise.reject( )**
+## **7. Promise.resolve( ) & promise.reject( )**
 
 Renvoit des promesses qui sont soit déjà résolues soit déjà rejetées
 
@@ -257,13 +257,13 @@ promise.resolve(2); // {<fulfilled>: 2}
 promise.reject(2); // {<rejected>: 2}
 ```
 
-## **Combinaisons de promesses & méthodes à connaître**
+## **8. Combinaisons de promesses & méthodes à connaître**
 
-### **Promise.all()**
+### **8.1 Promise.all()**
 
 On passe en premier param un itérable : ex array dans lequel on donne plusieurs promesses. Renvoit une nouvelle promesse qui aura pour résultat la résolution de toutes les promesses. Si une des promesses échoue, renvoit alors l’erreur de la promesse en question.
 
-#### **Résolues**
+- **Résolues**
 
 ```javascript
 function wait(duration) {
@@ -280,7 +280,7 @@ Promise.all([wait(1000), wait(2000)])
 
 ```
 
-#### **Rejected (au moins 1)**
+- **Rejected (au moins 1)**
 
 ```javascript
 function wait(duration) {
@@ -305,11 +305,11 @@ Promise.all([waitAndFail(1000), wait(2000)])
 // Error 
 ```
 
-### **Promise.allSettled()**
+### **8.2 Promise.allSettled()**
 
 Comme Promise.all() mais ici, on va ignorer les promesses qui ont échouées et **retourner un array d’objets**
 
-#### **Résolues**
+- **Résolues**
 
 ```javascript
 function wait(duration) {
@@ -331,7 +331,7 @@ Promise.allSettled([wait(1000), wait(2000)])
     // 1: {status: 'fulfilled', value: 2000}
 ```
 
-#### **Rejected (au moins 1)**
+- **Rejected (au moins 1)**
 
 ```javascript
 function wait(duration) {
@@ -361,11 +361,11 @@ Promise.allSettled([waitAndFail(1000), wait(2000)])
     // 1: {status: 'fulfilled', value: 2000}
 ```
 
-### **Promise.any()**
+### **8.3 Promise.any()**
 
 Prend en param plusieurs promesses et **retourne la première promesse qui est résolue**.
 
-#### **Résolues**
+- **Résolues**
 
 ```javascript
 function wait(duration) {
@@ -382,7 +382,7 @@ Promise.any([wait(1000), wait(2000)])
     // 1000
 ```
 
-#### **Rejected (au moins 1)**
+- **Rejected (au moins 1)**
 
 ```javascript
 function wait(duration) {
@@ -432,6 +432,6 @@ Promise.any([waitAndFail(1000), waitAndFail(2000)])
 // AggregateError: All promises were rejected
 ```
 
-### **Promise.race()**
+### **8.4Promise.race()**
 
 Comme le Promise.any() mais si la première promesse échoue ⇒ considère que toutes ont échouées.

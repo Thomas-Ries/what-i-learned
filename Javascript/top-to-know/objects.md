@@ -7,7 +7,7 @@ ___
 
 [Documentation regarding Objects](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-## **Object.entries( )**
+## **1. Object.entries( )**
 
 Va renvoyer un tableau avec les `clés` et `valeurs`
 
@@ -40,7 +40,7 @@ for (const [key, value] of Object.entries(object1)) {
 
 ___
 
-## **Object.keys( )**
+## **2. Object.keys( )**
 
 Renvoie un tableau contenant les clés propres à un objet. Intéressant pour pouvoir enchaîner sur une boucle
 
@@ -57,7 +57,7 @@ console.log(Object.keys(object1));
 
 ___
 
-## **Object.values( )**
+## **3. Object.values( )**
 
 Même principe que `Object.keys()`. Renvoie un tableau contenant les **valeurs propres à un objet**.
 
@@ -74,7 +74,7 @@ console.log(Object.values(object1));
 
 ___
 
-## **Object.assign( )**
+## **4. Object.assign( )**
 
 Permet d’assigner des propriétés d’un object à un autre.
 
@@ -108,14 +108,14 @@ console.log(person);
 
 ___
 
-## **Object.create( )**
+## **5. Object.create( )**
 
 Va créer un nouvel object en utilisant le prototype d’un object existant.  
 Devenue moins pratique et utilisée depuis ES6 et les classes  
 
 ___
 
-## **Object.freeze( )**
+## **6. Object.freeze( )**
 
 Permet de geler un object. L’object ne pourra plus être modifié et garantie une certaine sécurité.
 

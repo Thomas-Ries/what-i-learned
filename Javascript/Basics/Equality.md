@@ -12,7 +12,6 @@ JavaScript fournit trois opérations permettant de comparer des valeurs :
 - L'égalité stricte (ou identité ou « triple égal ») utilisant `===`,
 - L'égalité faible (ou « double égal ») utilisant `==`,
 - [Object.is()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (ajouté avec ECMAScript 2015).
-
 ___
 
 ## **L'égalité strict `===`**

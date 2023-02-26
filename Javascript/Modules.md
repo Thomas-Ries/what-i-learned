@@ -7,9 +7,9 @@ ___
 
 ## **Définition**
 
-Permet d’organiser son code JS en différents fichiers afin de gérer les exports et les imports dans le but d’avoir une architecture projet efficiente.
+>***Permet d’organiser son code JS en différents fichiers afin de gérer les exports et les imports dans le but d’avoir une architecture projet efficiente.***
 
-## **Définir et utiliser des modules**
+## **1. Définir et utiliser des modules**
 
 ```html
 <script type="module" src="./main.js"></script>
@@ -30,7 +30,7 @@ console.log(sum(10, 20)); // 30
 
 Il est aussi possible d’avoir un import dans un module
 
-## **Importer tous les exports**
+## **2. Importer tous les exports**
 
 Pas recommandé mais bon à savoir.
 
@@ -44,7 +44,7 @@ import * as obj from './math.js';
 console.log(obj.sum(10, 20)); // 30
 ```
 
-## **Export par defaut**
+## **3. Export par defaut**
 
 ```javascript
 // Dans un fichier hello.js
@@ -60,7 +60,7 @@ import hello from './hello.js'; // Pas besoin des curly braces si export default
 console.log(hello()); // coucou
 ```
 
-## **Import de modules de manière asynchrone**
+## **4. Import de modules de manière asynchrone**
 
 ```javascript
 // Dans main.js
@@ -80,7 +80,7 @@ console.log(import('math.js').then(({sum}) => // ...args = extrais tous les argu
 ));
 ```
 
-## **Top Level await**
+## **5. Top Level await**
 
 Il est possible de faire des await en dehors de fonction async à partir du moment où l’on se trouve dans un module
 
@@ -89,7 +89,7 @@ const { sum } = await import('./math.js');
 sum(10, 10); // 20
 ```
 
-## **Fonction IIFE**
+## **6. Fonction IIFE**
 
 Fonctions qui s’auto exécute
 

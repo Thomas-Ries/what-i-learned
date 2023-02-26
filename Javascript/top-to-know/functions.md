@@ -7,7 +7,8 @@ ___
 
 [Documentation regarding functions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
-## **foo.bind( )**
+## **1. foo.bind( )**
+
 Permet de créer une nouvelle fonction à partir d’une fonction existante en changeant le contexte de this.  
 
 Une méthode qui a été bindé aura une valeur de this qui sera définit et cette valeur ne pourra plus être modifiée par la suite.
@@ -26,7 +27,7 @@ hello2.call(4);
 
 ___
 
-## **foo.apply( )**
+## **2. foo.apply( )**
 
 Appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau.
 

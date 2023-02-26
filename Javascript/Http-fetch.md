@@ -1,15 +1,15 @@
 # **Appel HTTP avec fetch( )**
 
 **Statut**: Terminé  
-**Type**: Front-End, HTTP, Javascript, Objects, Request
+**Type**: Front-End, HTTP, Javascript, Request
 
 ___
 
 ## **Définition**
 
-Permet de contacter un serveur via requetes HTTP en JS. fetch() utilise de manière native les promesses
+> ***Permet de contacter un serveur via requetes HTTP en JS. fetch() utilise de manière native les promesses***
 
-## **fetch( ) & .then( )**
+## **1. fetch( ) & .then( )**
 
 [Doc response](https://developer.mozilla.org/fr/docs/Web/API/Response) 
 
@@ -18,9 +18,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
 	.then(res => console.log(res));
 ```
 
-## **Récupérer le contenu de la réponse (text & json)**
+## **2. Récupérer le contenu de la réponse (text & json)**
 
-### **Response.text( )**
+### **2.1 Response.text( )**
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -28,7 +28,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 	.then(body => console.log(body));
 ```
 
-### **Response.json( )**
+### **2.2 Response.json( )**
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -36,7 +36,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 	.then(body => console.log(body));
 ```
 
-## **Gérer les erreurs à l’appel**
+## **3. Gérer les erreurs à l’appel**
 
 ```javascript
 async function fetchUsers() {
@@ -53,7 +53,7 @@ fetchUsers().then(users => console.log(users));
 // Uncaught (in promise) Error: Impossible de contacter le serveur at fetchUsers
 ```
 
-## **Options importantes (header et method)**
+## **4. Options importantes (header et method)**
 
 - **Accept** = ce que l’on accept de recevoir
 - **Content-Type**: ce que l’on envoie comme type de données “application/json”
@@ -76,7 +76,7 @@ async function fetchUsers() {
 fetchUsers().then(users => console.log(users));
 ```
 
-## **Envoyer des données**
+## **5. Envoyer des données**
 
 - **body** : ce que l’on envoie au serveur (string, objets…)
 
@@ -99,11 +99,11 @@ async function fetchUsers() {
 fetchUsers().then(users => console.log(users));
 ```
 
-## **Arrêter un fetch( )**
+## **6. Arrêter un fetch( )**
 
 ⇒ (très spécific)
 
-### **Contexte**
+### **7. Contexte**
 
 Nous avons 2 serveurs à contacter : liste des articles et users
 
@@ -120,7 +120,7 @@ Promise.race([
 
 On récupère bien les users car la requête à été la plus rapide mais les posts sont toujours en train de tourner (voir onglet network dans dev tools). Il faudrait pouvoir arrêter la seconde requête une fois la plus rapide récéptionnée.
 
-## **AbortController()**
+## **8. AbortController()**
 
 ```jsx
 // Initialisation du controller qui enverra le signal d'annulation

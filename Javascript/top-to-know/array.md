@@ -7,7 +7,7 @@ ___
 
 [Documentation regarding arrays](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-## **array.filter( )**
+## **1. array.filter( )**
 
 Méthode permettant de filter les résultats  
 
@@ -22,7 +22,7 @@ console.log(goodNotes);
 
 ___
 
-## **array.map( )**
+## **2. array.map( )**
 
 Prend en premier param une fonction qui **permet d’altérer les éléments**. Elle transforme un tableau.
 Le tableau en sorti aura la même longueur que le tableau initial.
@@ -63,7 +63,7 @@ console.log(persons.map((p) => p.firstname + ' ' + p.lastname).join('\n'))
 
 ___
 
-## **array.reduce( )**
+## **3. array.reduce( )**
 
 Prend 2 params
 
@@ -98,7 +98,7 @@ console.log(
 
 ___
 
-## **array.at( )**
+## **4. array.at( )**
 
 Permet de récupérer un élément à un index donné. Accepte des index négatifs.  
 
@@ -112,7 +112,7 @@ console.log(notes[notes.length - 1];
 
 ___
 
-## **array.concat( )**
+## **5. array.concat( )**
 
 Permet de concaténer des tableaux entre eux afin de les fusionner
 
@@ -127,7 +127,7 @@ console.log(array3);
 
 ___
 
-## array.includes( )
+## **6.array.includes( )**
 Permet de vérifier si une valeur est incluse dans un tableau
 
 ```javascript
@@ -145,7 +145,7 @@ console.log(pets.includes('at'));
 
 ___
 
-## **array.findIndex( )**
+## **7. array.findIndex( )**
 
 Permet de récupérer l’index de l’élément qui a été trouvé
 
@@ -162,7 +162,7 @@ console.log(array1.findIndex(isLargeNumber));
 
 ___
 
-## **array.foreach( )**
+## **8. array.foreach( )**
 
 Parcourir un tableau pour travailler sur la valeur et sur l’index.
 
@@ -181,7 +181,7 @@ notes.forEach((note, index) => {
 
 ___
 
-## **array.from( )**
+## **9. array.from( )**
 
 Permet de créer un tableau à parti de diverses valeurs comme string.
 Intéressant quand on a une valeur itérable que l’on souhaite passer en array
@@ -197,7 +197,7 @@ console.log(Array.from([1, 2, 3], x => x + x));
 
 ___
 
-## **array.join( )**
+## **10. array.join( )**
 
 Permet de joindre les éléments avec un caractère de liaison
 
@@ -216,7 +216,8 @@ console.log(elements.join('-'));
 
 ___
 
-## **array.pop( )**
+## **11. array.pop( )**
+
 Retire le dernier élément d’un tableau mais modifie le tableau initial
 
 ```javascript
@@ -231,7 +232,7 @@ console.log(plants);
 
 ___
 
-## **array.shift( )**
+## **12. array.shift( )**
 
 Retire le premier élément d’un tableau mais **modifie le tableau initial**
 
@@ -248,7 +249,7 @@ console.log(firstElement);
 
 ___
 
-## **array.slice( )**
+## **13. array.slice( )**
 
 Permet de récupérer une partie du tableau. Créer un nouveau tableau sans toucher au premier.
 
@@ -277,7 +278,7 @@ console.log(animals.slice());
 
 ___
 
-## **array.push( )**
+## **14. array.push( )**
 
 Ajoute un ou plusieurs éléments à un tableau **mais affecte le tableau initial**
 
@@ -294,7 +295,7 @@ console.log(animals);
 
 ___
 
-## **array.unshift( )**
+## **15. array.unshift( )**
 
 Permet d’ajouter un ou plusieurs éléments au début du tableau **mais modifie le tableau initial**
 
